@@ -3,6 +3,7 @@ import DropdownSelect from '../_containers/DropdownSelect';
 import CheckSVG from '../_svg/CheckSVG';
 import DefaultProfileSVG from '../_svg/DefaultProfileSVG';
 import ProfileImage from './ProfileImage';
+import Shelves from './Shelves';
 
 const BOOKS = [
 	'knight_shoe_dog.jpeg',
@@ -20,7 +21,7 @@ const BOOKS = [
 const Profile = () => {
 	return (
 		<>
-			<div className='content-container'>
+			<div className='content-container' id='page-container'>
 				<br />
 				<DropdownSelect
 					options={[]}
@@ -95,12 +96,12 @@ const Profile = () => {
 
 				{/* Top Recommendations */}
 				<div className='page-section'>
-					<h2 className='section-title'>Top Recommendations</h2>
+					<h2 className='section-title'>Recommended Reads</h2>
 					<div
 						className='flex-row center'
-						style={{ flexWrap: 'wrap', margin: '0 auto', width: '85rem' }}>
+						style={{ flexWrap: 'wrap', margin: '0 0 0 2rem', width: '85rem' }}>
 						{/* Book */}
-						{BOOKS.map((book) => (
+						{BOOKS.slice(0, 5).map((book) => (
 							<div className='book-container'>
 								<div className='book-wrapper'>
 									<img className='book' src={`./${book}`} alt='' />
@@ -116,9 +117,9 @@ const Profile = () => {
 				{/* Top Authors */}
 				<div className='page-section'>
 					<h2 className='section-title' style={{ marginTop: '4rem' }}>
-						Top Authors
+						Recommended Authors
 					</h2>
-					<div className='flex-row center'>
+					<div className='flex-row center' style={{ marginLeft: '2rem' }}>
 						{/* Author */}
 						<div className='profile-img-wrapper' style={{ maxWidth: '10rem', margin: '1rem' }}>
 							<DefaultProfileSVG className='profile-img' />
@@ -145,6 +146,8 @@ const Profile = () => {
 						</div>
 					</div>
 				</div>
+
+				<Shelves />
 			</div>
 		</>
 	);

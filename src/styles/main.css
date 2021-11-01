@@ -146,14 +146,15 @@ button {
 	border-radius: 2rem;
 	max-width: 90rem;
 	margin: 2rem auto 0 auto;
+	padding-bottom: 3rem;
 	overflow: hidden;
 }
 .page-section {
-	margin: 5rem 0 0 2rem;
+	margin: 5rem 0 0 0;
 }
 .section-title {
 	display: inline;
-	margin-left: 1rem;
+	margin-left: 3rem;
 	font-size: 2rem;
 	font-weight: bold;
 	text-shadow: 2px 2px 0 rgba(var(--color-foreground-rgb), 0.2);
@@ -243,7 +244,7 @@ svg.profile-img {
 }
 
 .book-container {
-	margin: 3rem 5rem;
+	margin: 3rem 4.5rem;
 	position: relative;
 }
 
@@ -398,4 +399,17 @@ svg.profile-img {
 .shelf-placard-wrapper:hover .shelf-placard {
 	background-color: rgba(255, 255, 255, 0.05);
 	color: white;
+}
+
+.shelf-row svg {
+	width: 3rem;
+	height: 3rem;
+	flex-basis: 1;
+	fill: var(--color-foreground);
+}
+
+.shelf-next-button {
+	background: none;
+	border: none;
+	padding: 0;
 }
